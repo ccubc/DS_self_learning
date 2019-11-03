@@ -73,3 +73,22 @@ def solution(deck):
             gcd = gcd_multi(unique_d_value)
             return (gcd>1)
 print(solution(deck))
+
+
+
+# improved version using counter
+from collections import Counter
+def solution2(deck):
+    c = Counter(deck)
+    l = list(c.values())
+    k = l[0]
+    for i in range(1,len(l)):
+        k = gcd(k, l[i])
+    if(k>1):
+        return True
+    else:
+        return False
+print(solution2(deck))
+
+# the second method uses less time and the code looks cleaner!
+    
