@@ -31,3 +31,43 @@ def solution(l1, l2):
     return l3
 
 print(solution(l1,l2))
+
+
+# Using LinkedList
+
+class ListNode:
+    def __init__(self, x): 
+        self.val = x
+        self.next = None
+l1_node = ListNode(1)
+l1_node2 = ListNode(3)
+l1_node.next = l1_node2
+l1_node3 = ListNode(5)
+l1_node2.next = l1_node3
+print(l1_node.next.val)
+l1_node.next.val
+l2_node = ListNode(2)
+l2_node2 = ListNode(4)
+l2_node3 = ListNode(6)
+l2_node.next= l2_node2
+l2_node2.next = l2_node3
+
+def mergeTwoLists(l1, l2):
+    head = ListNode(-1)
+    current = head
+    while l1 and l2:
+        if l1.val <= l2.val:
+            current.next = l1
+            l1 = l1.next
+        else:
+            current.next = l2
+            l2 = l2.next
+        current = current.next
+    if l1:
+        current.next = l1
+    if l2: 
+        current.next = l2
+    return head.next
+
+
+solution_linked_list = mergeTwoLists(l1_node, l2_node)
