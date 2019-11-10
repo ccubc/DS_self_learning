@@ -28,7 +28,7 @@ def quickSort(x):
     if len(x) <= 1:
         return x
     else:
-        x, pivot = partition(x)
+        pivot = partition(x)
         return quickSort(x[:pivot]) + [x[pivot]] + quickSort(x[pivot+1:])
 
 def partition(x):
@@ -43,8 +43,8 @@ def partition(x):
         else:
             x[pt], x[right_p] = x[right_p], x[pt]
             right_p -= 1
-    return x, pivot
+    return pivot
 
-print(quickSort([3,1,4,2,5]))
+print(quickSort([3,2,4,1,22,-6,1,4,2,5]))
 
 
