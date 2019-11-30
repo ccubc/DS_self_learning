@@ -29,4 +29,3 @@ class Solution:
                 cur_d = self.maxDepth(c)
                 max_d = max(max_d, cur_d + 1)
             return max_d
-        

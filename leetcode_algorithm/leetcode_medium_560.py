@@ -16,7 +16,7 @@ The range of numbers in the array is [-1000, 1000] and the range of the integer 
 
 """
 
-def subarraySum(nums, k):
+def subarraySum(nums, k): # O(N^2)
     dic_pre = {}
     dic_all = {}
     dic_pre[nums[0]] = 1
