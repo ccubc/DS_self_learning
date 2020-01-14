@@ -24,41 +24,46 @@ import sys
 Merge Sort O(NlogN)
 """
 
-def merge(arr, left_half, right_half):
-    i, j, k = 0, 0, 0
-    inversions = 0
-    left_len, right_len = len(left_half), len(right_half)
-    while i < left_len and j < right_len:
-        if left_half[i] <= right_half[j]:
-            arr[k] = left_half[i]
+
+def merge(arr, left, right):
+    inversion = 0
+    i = 0 # pointer to the left half
+    j = 0 # pointer to the right half
+    k = 0 # pointer to the array
+    left_length = len(left)
+    right_length = len(right)
+    while i < left_length and j < right_length: # when there are elements left in both left and right half of the arrays
+        if left[i] <= right[j]: # no inversion needed
+            arr[k] = left[i]
             i += 1
-        else:
-            arr[k] = right_half[j]
+        else: # inversion needed
+            arr[k] = right[j]
             j += 1
-            inversions += left_len - i
+            inversion += (left_length - i)
         k += 1
-
-    while i < left_len:
-        arr[k] = left_half[i]
-        i, k = i+1, k+1
-
-    while j < right_len:
-        arr[k] = right_half[j]
-        j, k = j+1, k+1
-
-    return inversions
+    while i < left_length: 
+        arr[k] = left[i]
+        i+=1
+        k+=1
+    while j < right_length:
+        arr[k] = right[j]
+        j+=1
+        k+=1
+    return inversion
 
 def merge_sort(arr):
-    if len(arr) > 1:
-        mid = len(arr)//2
-        left_half, right_half = arr[:mid], arr[mid:]
+    if len(arr) <= 1:
+        return 0
+    mid = len(arr)//2
+    left = arr[:mid]
+    right = arr[mid:]
+    inversion = merge_sort(left) + merge_sort(right) + merge(arr, left, right)
+    return inversion
 
-        inversions = merge_sort(left_half) + merge_sort(right_half) + merge(arr, left_half, right_half)
-        return inversions
-    return 0
-
+# Complete the countInversions function below.
 def countInversions(arr):
-    return merge_sort(arr)    
+    return merge_sort(arr)
+
 
 
 def countInversions2(arr):
