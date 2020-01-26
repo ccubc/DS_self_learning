@@ -22,6 +22,39 @@ A solution set is:
 @author: chengchen
 """
 
+# Use 2 pointer with sorted list to fasten the computation
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        solution = []
+        nums.sort()
+        length = len(nums)
+        for i in range(length - 2):
+            if nums[i] > 0:
+                break
+            if i > 0 and nums[i] == nums[i-1]:
+                continue            
+            start = i + 1
+            end = len(nums) - 1
+            while start < end:
+                total = nums[i] + nums[start] + nums[end]
+                if total < 0:
+                    start += 1
+                elif total > 0:
+                    end -= 1
+                else:
+                    solution.append([nums[i], nums[start], nums[end]])
+                    while start < end and nums[start] == nums[start+1]:
+                        start += 1
+                    while start < end and nums[end] == nums[end-1]:
+                        end -= 1
+                    start += 1
+                    end -= 1
+        return solution
+                
+        
+
+
+# The below solution is O(N2), similar to the classic 2-sum solution
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         solution = []
