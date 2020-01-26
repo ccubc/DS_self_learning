@@ -35,3 +35,7 @@ class Solution:
             res += dic1[-key]*value
         return res
                     
+#another solution using Counter, but with similar idea
+    def fourSumCount(self, A: List[int], B: List[int], C: List[int], D: List[int]) -> int:
+        countSumAB = collections.Counter(a+b for a in A for b in B)
+        return sum(countSumAB[-c-d] for c in C for d in D)
