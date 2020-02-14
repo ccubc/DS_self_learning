@@ -22,4 +22,15 @@ Docker is a container that makes it easy to run and distribute applications acro
 `sudo docker rm container_id`
 * remove all docker containers from the system:
 `sudo docker rm ^C`
- 
+
+#### Creating your own images --- Dockerfile( a txt file that contains step-by-step instructions for creating Docker images) 
+* example Dockerfile:
+```
+FROM alpine: 3.1
+MAINTAINER Kelsey Hightower
+ADD hello /usr/bin/hello
+ENTRYPOINT ["hello"]
+```
+
+
+
