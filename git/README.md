@@ -55,7 +55,12 @@ The workflow to use branches: <br>
 * `git checkout sidebar`: to make commits to the `sidebar` branch instead of the `master` branch, this command will switch to the `sidebar` branch
 * `git branch -d sidebar`: delete the `sidebar` branch (Git won't let you delete a branch if you are currently on this branch, or if this branch contains unique commits that aren't on any other branch. To force delete, use `git branch -D sidebar`)
 * `git merge sidebar`: make sure you're on the `master` branch and run this line to merge the `sidebar` branch
- * A merge conflict will occur if the exact same lines are changed in separate branches.
+* A merge conflict will occur if the exact same lines are changed in separate branches.
+<br>
+### Undoing Changes
+* `git commit --amend`: alter the most-recent commit
+* `git revert SHA`: reverses given commit
+* `git reset`: erases commits (this is dangerous!)
 
 
 
