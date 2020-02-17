@@ -38,3 +38,10 @@ Commits should be frequent and descriptive.
 * the date
 * the commit message
 
+### Add Commits To A Repo
+* `git add`: add a file to the staging index
+* `git commit -m "commit message" `: add a file from the staging index to the repo
+* `git diff`: show uncommitted changes
+* '.gitignore' file: list the names of files to ignore
+
+
