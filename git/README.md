@@ -50,9 +50,9 @@ Commits should be frequent and descriptive.
 * `git checkout`: switch between different branches and tags
 * `git merge`: combines changes on different branches
 <br><br>
-The workflow to use branches:
-*`git branch sidebar`: create a branch called sidebar
-*`git checkout sidebar`: to make commits to the `sidebar` branch instead of the `master` branch, this command will switch to the `sidebar` branch
+The workflow to use branches: <br>
+* `git branch sidebar`: create a branch called sidebar
+* `git checkout sidebar`: to make commits to the `sidebar` branch instead of the `master` branch, this command will switch to the `sidebar` branch
 * `git branch -d sidebar`: delete the `sidebar` branch (Git won't let you delete a branch if you are currently on this branch, or if this branch contains unique commits that aren't on any other branch. To force delete, use `git branch -D sidebar`)
 * `git merge sidebar`: make sure you're on the `master` branch and run this line to merge the `sidebar` branch
  * A merge conflict will occur if the exact same lines are changed in separate branches.
