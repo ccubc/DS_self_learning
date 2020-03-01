@@ -40,3 +40,19 @@ def twoSum2(nums, target):
             return [dic[target - nums[i]], i]
 answer = twoSum2(nums, target)
 print(answer)
+
+
+
+
+
+from collections import defaultdict
+class Solution:
+    """using defaultdict"""
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        d = defaultdict(int)
+        for i in range(len(nums)):
+            m = target - nums[i]
+            if m in d:
+                return [d[m], i]
+            else:
+                d[nums[i]] 
