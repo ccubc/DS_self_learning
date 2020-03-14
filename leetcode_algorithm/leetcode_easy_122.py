@@ -32,6 +32,11 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 
 """
 
+
+def maxProfit(self, prices: List[int]) -> int:
+    return sum([max(prices[i+1] - prices[i], 0) for i in range(len(prices)-1)])
+
+
 def maxProfit(prices):
     if (len(prices)<2):
         return 0
