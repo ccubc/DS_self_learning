@@ -34,3 +34,13 @@ class Solution:
             cur = pre1 + pre2
             pre2, pre1 = pre1, cur
         return cur
+
+# dynamic programming 20200314
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        if n == 1: 
+            return 1
+        res = [1,2]
+        for i in range(2, n):
+            res = [res[1], sum(res)]
+        return res[1]
