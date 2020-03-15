@@ -21,3 +21,13 @@
 * `echo "I'm in the file." > echo-output.txt`: use `>` for **output redirection**
 * `echo "I have been appended." >> echo-output.txt`: use `>>` to **append** text to the end of a file.
 * nano is a simple text editor in terminal.
+
+
+### Migration and Destruction: moving, renaming, copying, deleting files and folders
+* `mv journal-2020-03-14.txt Journal`: move the file journal-2020-03-14.txt to the Journal folder
+* `mv Journal Documents`: move the Journal folder to Documents folder
+* `mv todo.txt todo-2020-03-14.txt`: use mv to rename file and folders
+* `cp echo-out.txt Desktop`: copy a file from one location to another
+* `cp -r Documents Desktop`: copy a file folder, r means recursive, every underlying directory structure will be copied
+* `rm echo-out.txt`: remove file or folder, i.e. permanently delete, not recommended (no way to undo)
+
