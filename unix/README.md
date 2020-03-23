@@ -31,3 +31,7 @@
 * `cp -r Documents Desktop`: copy a file folder, r means recursive, every underlying directory structure will be copied
 * `rm echo-out.txt`: remove file or folder, i.e. permanently delete, not recommended (no way to undo)
 
+### Use wildcard
+* `ls 2019*`: list all files starting with '2019'
+* `ls 2019*.jpg`: list all jpg files starting with '2019'
+* `mv 2019*.jpg 2019/`: move all jpg files starting with 2019 to folder 2019
