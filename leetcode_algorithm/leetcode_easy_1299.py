@@ -9,6 +9,17 @@ After doing so, return the array.
 """
 
 class Solution:
+# speed is faster
+    def replaceElements(self, arr: List[int]) -> List[int]:
+        cur_m = -1
+        ans = arr.copy()
+        ans[-1] = -1
+        for i in range(len(arr)-1, 0, -1):
+            cur_m = max(cur_m, arr[i])
+            ans[i-1] = cur_m
+        return ans    
+    
+# very slow    
     def replaceElements(self, arr: List[int]) -> List[int]:
         cur_m = -1
         ans = [-1]
