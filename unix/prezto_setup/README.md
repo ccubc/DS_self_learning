@@ -9,7 +9,7 @@ Fortunately a friend pointed me to this repo: [Prezto](https://github.com/sorin-
 * fast cd to a directory you've recently visited (whereas what I used to do is constantly cd and ls and pwd) by just typing part of that directory name
 * syntax highlighting<br><br>
 These are the features that I found extremely useful, but there must be more to find :) <br><br>
-Below is a simple demo of ``using alias for git commit and displaying git branch and status``. Instead of typing `git branch`, you only need to type `gb`
+Below is a simple demo of ``using alias for git commit and displaying git branch and status``. Instead of typing `git branch`, you only need to type `gb` <br><br>
 ![demo](https://github.com/ccubc/DS_self_learning/blob/small_potato/unix/prezto_setup/demo.png "demo")
 
 ## How to Install and Set up Prezto
