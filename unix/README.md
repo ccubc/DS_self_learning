@@ -6,6 +6,9 @@
 * `cd`: change directories
 * `rm`: remove files and directories
 * `pwd`: print working directory
+* `history`: print command history
+
+
 
 ### About directory:
 * `/`: root directory, e.g. use `cd /` to change to root directory
@@ -15,6 +18,7 @@
 * `touch journal-2020-03-14.txt`: create a new file in the current directory
 * `wc todo.txt`: word count command, # lines, # words, # characters
 * `cat todo.txt todo.txt`: concatenate files and print them to terminal
+* `cat part1.txt part2.txt > all.txt`: concatenate files to a new file
 * `less Documents/a-tale-of-two-cities.txt`: print a preview of multi-page files (print the first several lines)
 * `head document.txt`: print the head of the document
 * `tail document.txt`: print the tail of the document
@@ -55,12 +59,16 @@
 * There are also other use cases for using Regex to search for str.
 
 
-### find
+### Find
 * `find . -name "states.txt"`: look for a file called states.txt (within the dir or sub dir of current dir)
 * `find . -name "*.jpg"`: look for all jpg inside this dir
 * You don't need it since you use Spotlight ^O^
 
 
+### Difference
+* `diff result_v1.txt result_v2.txt`: will print out the difference between two files
+* `sdiff result_v1.txt result_v2.txt`: will print the differing lines in a side-by-side comparison
+* `diff result_v1.txt result_v2.txt > diff_res.txt`: save the difference to diff_res.txt
 
 
 
