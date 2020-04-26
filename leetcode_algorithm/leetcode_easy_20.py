@@ -55,5 +55,27 @@ def isValid(s):
         return False
     return flag
 print(isValid(s))
+
+
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        dic = {')':'(',
+              ']': '[',
+              '}': '{'}
+        stack = []
+        for c in s:
+            if c in '([{':
+                stack.append(c)
+            else:
+                try:
+                    if stack.pop() == dic[c]:
+                        continue
+                    else:
+                        return False
+                except:
+                    return False
+        return len(stack)==0
         
     
