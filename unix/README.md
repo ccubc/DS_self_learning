@@ -18,7 +18,7 @@
 * `less Documents/a-tale-of-two-cities.txt`: print a preview of multi-page files (print the first several lines)
 * `head document.txt`: print the head of the document
 * `tail document.txt`: print the tail of the document
-* `egrep "San" cities.txt`: search str in the text (will print the strings that contain "San")
+* `grep "San" cities.txt`: search str in the text (will print the strings that contain "San")
 * `echo "I'm in the file." > echo-output.txt`: use `>` for **output redirection**
 * `echo "I have been appended." >> echo-output.txt`: use `>>` to **append** text to the end of a file.
 * nano is a simple text editor in terminal.
@@ -43,4 +43,30 @@
 * `ls 2019*`: list all files starting with '2019'
 * `ls 2019*.jpg`: list all jpg files starting with '2019'
 * `mv 2019*.jpg 2019/`: move all jpg files starting with 2019 to folder 2019
+
+
+### Regex
+
+* `egrep "i.g" cities.txt`: search str in the text that contains "i+some char+ g"
+* `egrep "s+as" cities.txt`: search for one or more "s" followed by "as"
+* `egrep "\w" small.txt`: all word characters ( eng + number)
+* `egrep "\d" small.txt`: all number characters
+* `egrep "\s" small.txt`: all space characters
+* There are also other use cases for using Regex to search for str.
+
+
+### find
+* `find . -name "states.txt"`: look for a file called states.txt (within the dir or sub dir of current dir)
+* `find . -name "*.jpg"`: look for all jpg inside this dir
+* You don't need it since you use Spotlight ^O^
+
+
+
+
+
+
+
+
+
+
 
