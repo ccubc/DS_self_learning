@@ -12,21 +12,19 @@ These are the features that I found extremely useful, but there must be more to 
 Below is a simple demo of ``using alias for git commit and displaying git branch and status``. Instead of typing `git branch`, you only need to type `gb` <br><br>
 ![demo](https://github.com/ccubc/DS_self_learning/blob/small_potato/unix/prezto_setup/demo.png "demo")
 
-## How to Install and Set up Prezto
+## How to Install and Set up Prezto on Mac OS
 #### 1. Install Prezto
 Just follow the install instructions [HERE](https://github.com/sorin-ionescu/prezto). It's just 4 copy and pastes to your terminal.
 
 #### 2. Enable the Submodules Including git
-1. cd to your home directory by type cd followed by a space and then hit enter in your terminal<br>
-`cd ` <br>
-2. look for the hidden file: .zpreztorc<br>
-`ls -a` <br>
-check whether the .zpreztorc is there --- it should be, then continue to next step <br>
-3. enter this file and add the submodules to it <br>
-`nano .zpreztorc`
-4. You will enter nano, which is a text editor on your terminal. <br>Use your cursor to scroll down the file until you see lines of submodules there, such as 'environment', 'terminal', 'editor', etc. <br>Then add 'git', 'fasd', 'syntax-highlighting' before the line of 'prompt'<br>
-5. After you are done adding those, hit Ctr + X (this will exit) <br>
-It will ask you whether to save changes, so hit Y <br>
-It will ask you whether to the name to write is .zpreztorc, so hit enter <br>
-6. Open a new terminal window, you will see the lovely changes.
 
+1. run this in the terminal to open the .zpreztorc file and add the submodules to it <br>
+`open ~/.zpreztorc`
+2. Scroll down the file until you see lines of submodules there, such as 'environment', 'terminal', 'editor', etc. <br>Then add 'git', 'fasd', 'syntax-highlighting' before the line of 'prompt'<br>
+3. save and close the file
+4. Open a new terminal window, you will see the lovely changes.
+
+#### Trouble shooting with Anaconda
+If you have installed Anaconda before this, you might find that running `jupyter notebook` in zsh would throw an error with a message like "jupyter command not found". (I encountered this problem myself.) The reason being that when you installed Anaconda, it would write something in your .bash_profile, so that every time when starting a bash session, those commands would be run to tell the computer where to find the paths, etc. But after changing your shell to zsh, the computer no longer knows. After searching for the solutions and trying them out, I found the codes below ([from this post](https://github.com/conda/conda/issues/8492))solved my problem.<br>
+`conda update conda` <br>
+`conda init zsh`
