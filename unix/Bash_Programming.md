@@ -13,3 +13,6 @@
 `bash vars.sh apple pear` <br>
 `bash vars.sh apple pear orange`
 
+## User Inputs
+* `read userinput`
+* run `bash letsread.sh` to see 
