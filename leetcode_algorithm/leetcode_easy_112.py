@@ -18,7 +18,6 @@ Given the below binary tree and sum = 22,
 return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 """
 
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
@@ -29,11 +28,6 @@ class Solution:
     def hasPathSum(self, root: TreeNode, sum: int) -> bool:
         if root == None:
             return False
-        elif root.left and root.right:
-            return self.hasPathSum(root.left, sum-root.val) or self.hasPathSum(root.right, sum-root.val)
-        elif root.left:
-            return self.hasPathSum(root.left, sum-root.val)
-        elif root.right:
-            return self.hasPathSum(root.right, sum-root.val)
         elif not root.left and not root.right:
-            return (root.val==sum)
+            return (root.val==sum)        
+        return self.hasPathSum(root.left, sum-root.val) or self.hasPathSum(root.right, sum-root.val)
