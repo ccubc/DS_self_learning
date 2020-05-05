@@ -30,7 +30,7 @@ class Solution:
         if root == None:
             return False
         elif root.left and root.right:
-            return self.hasPathSum(root.left, sum-root.val) or self.hasPathSum2(root.right, sum-root.val)
+            return self.hasPathSum(root.left, sum-root.val) or self.hasPathSum(root.right, sum-root.val)
         elif root.left:
             return self.hasPathSum(root.left, sum-root.val)
         elif root.right:
