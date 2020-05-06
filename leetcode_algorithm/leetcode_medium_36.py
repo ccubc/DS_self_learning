@@ -59,10 +59,11 @@ class Solution:
         for col in range(9):
             col_dic = {}
             for row in range(9):
-                if not board[row][col].isdigit():
+                cell = board[row][col]
+                if not cell.isdigit():
                     continue
-                if board[row][col] not in col_dic:
-                    col_dic[board[row][col]] = 1
+                if cell not in col_dic:
+                    col_dic[cell] = 1
                 else:
                     return False
         for i in range(3):
