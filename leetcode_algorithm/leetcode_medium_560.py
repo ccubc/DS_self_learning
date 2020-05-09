@@ -16,6 +16,46 @@ The range of numbers in the array is [-1000, 1000] and the range of the integer 
  
 """
 
+class Solution(object):
+    def subarraySum(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: int
+        """
+        count = 0
+        sums = 0
+        d = dict()
+        d[0] = 1
+        
+        for i in range(len(nums)):
+            sums += nums[i]
+            count += d.get(sums-k,0)
+            d[sums] = d.get(sums,0) + 1
+        
+        return(count)
+
+
+
+# 202005
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        ans = 0
+        dic = {}
+        for n in nums:
+            keys = [i+n for i in dic.keys()]
+            dic = dict(zip(keys, dic.values()))  
+            dic[n] = dic.get(n, 0) + 1
+            ans += dic.get(k, 0)
+        return ans
+    
+
+                
+
+
+
+
+# 201911
 def subarraySum(nums, k): # O(N^2)
     dic_pre = {}
     dic_all = {}
