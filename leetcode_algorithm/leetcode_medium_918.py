@@ -41,6 +41,7 @@ Note:
 
 """
 
+#Record all the max and min subarray sums that ends at index i. For non-circular sum, take the maximum of endmax; for circular sum, take sum(A)-min(endmin).
 
 class Solution(object):
     def maxSubarraySumCircular(self, A):
