@@ -9,10 +9,26 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 """
 
-
+# O(N) 思路是先看最胖的，再慢慢找更瘦但更高的。
+# 在找更高的同时，寄希望于用更高的替换掉当前的短板，因此当前的矮板不用考虑了。
+import numpy as np
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        res = 0
+        i, j = 0, len(height) - 1
+        while i < j:
+            res = max(res, (j-i)*min(height[j], height[i]))
+            if height[i] < height[j]:
+                i += 1
+            else:
+                j -= 1
+        return res
+            
+                
 
 
 # O(Nlog(N)) ugly code that I would not understand tomorrow if I read it myself
+# 思路是先看高的，再慢慢找更矮但更胖的
 import numpy as np
 class Solution:
     def maxArea(self, height: List[int]) -> int:
