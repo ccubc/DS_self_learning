@@ -1,4 +1,4 @@
-## Better Terminal Experience with Prezto
+## Better Terminal Experience with Zsh (using Prezto)
 
 ### Disclaimer
 I am an *absolute newby* to serious coding. Now that since my coworkers run their Python script on terminal, and that I'm required to use Git every day, I'm starting to use the Terminal a lot, or shell, console, command line, whatever you call that scary black and white window with only a cursor to navigate through. <br>
@@ -24,7 +24,14 @@ Just follow the install instructions [HERE](https://github.com/sorin-ionescu/pre
 3. save and close the file
 4. Open a new terminal window, you will see the lovely changes.
 
+#### Adding Emojis to Your Terminal🐣
+1. On Mac, you could access the emoji keypad with "Ctrl"+"Command"+"Space".
+2. Open the file that governs the sorin theme asthetics (sorin theme is the default theme) by `open ~/.zprezto/modules/prompt/functions/prompt_sorin_setup`
+3. Look for the section "set git-info parameters". You may add emoji here. For example, change the line `  zstyle ':prezto:module:git:info:modified' format ' %%B%F{4}✱%f%%b'` to `  zstyle ':prezto:module:git:info:modified' format ' %%B%F{4}✱%f%%b 🎃'`
+
+
 #### Trouble shooting with Anaconda
 If you have installed Anaconda before this, you might find that running `jupyter notebook` in zsh would throw an error with a message like "jupyter command not found". (I encountered this problem myself.) The reason being that when you installed Anaconda, it would write something in your .bash_profile, so that every time when starting a bash session, those commands would be run to tell the computer where to find the paths, etc. But after changing your shell to zsh, the computer no longer knows. After searching for the solutions and trying them out, I found the codes below ([from this post](https://github.com/conda/conda/issues/8492))solved my problem.<br>
 `conda update conda` <br>
 `conda init zsh`
+
