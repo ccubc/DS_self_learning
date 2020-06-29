@@ -14,6 +14,7 @@ Output: [1,2]
 Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 """
 
+# use dictionary
 
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
@@ -22,3 +23,18 @@ class Solution:
                 dic[numbers[i]] = i
             else:
                 return([dic[target - numbers[i]]+1, i+1])
+
+
+
+# two pointers
+class Solution:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        mid = len(numbers)//2
+        left, right = 0, len(numbers) - 1
+        while left < right:
+            if numbers[left] + numbers[right] > target:
+                right -= 1
+            elif numbers[left] + numbers[right] < target:
+                left += 1
+            else:
+                return [left+1, right+1]
