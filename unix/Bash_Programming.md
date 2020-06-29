@@ -16,3 +16,7 @@
 ## User Inputs
 * `read userinput`
 * run `bash letsread.sh` to see 
+
+## Status of last command
+* run `echo $?` to print out the status of last command (0 means successfully ran last command)
+
