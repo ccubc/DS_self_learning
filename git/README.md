@@ -44,8 +44,7 @@ Commits should be frequent and descriptive.
 * `git diff`: show uncommitted changes
 * '.gitignore' file: list the names of files to ignore
 
-### Tagging, Branching, and Merging
-* `git tag`: add tags to specific commits, e.g., specifying this commit completes 'version 1.0'
+### Branching, and Merging
 * `git branch`: allows multiple lines of development so that one can make changes without affecting the `master` branch, this command can be used to list all branch names in the repository, create new branches, and delete branches<br>
 * `git checkout`: switch between different branches and tags
 * `git merge`: combines changes on different branches
@@ -57,10 +56,25 @@ The workflow to use branches: <br>
 * `git merge sidebar`: make sure you're on the `master` branch and run this line to merge the `sidebar` branch
 * A merge conflict will occur if the exact same lines are changed in separate branches.
 <br>
+
 ### Undoing Changes
 * `git commit --amend`: alter the most-recent commit
 * `git revert SHA`: reverses given commit
 * `git reset`: erases commits (this is dangerous!)
+
+### Tagging
+* `git tag <tag name>`: add tags to specific commits, e.g., specifying this commit completes 'version 1.0'
+* `git tag <tag name> <reference of commit>`: create a tag from a past commit; `<reference of commit>` can be part of the SHA number
+* `git tag` or `gt`: list all tags
+* `git tag -l "v1.*"` or `gtl`: list all tags starting with "v1."
+* `git tag -a <tag name> -m "annotated tag message"`: create an annotated tag
+* `git show <tag name>`: print out the difference in this tag
+* `git push origin <tag name>`: push a specific tag to remote
+* `git push --tags` or `gpt`: push all tags to remote
+* `git tag -d <tag name>`: delete tags from local
+* `git push origin -d <tag name>`: delete tags from remote
+* `git checkout -b <branch name> <tag name>`: create a branch from a tag and checkout the branch
+
 
 
 
