@@ -50,3 +50,20 @@ class ParkingSystem:
 # Your ParkingSystem object will be instantiated and called as such:
 # obj = ParkingSystem(big, medium, small)
 # param_1 = obj.addCar(carType)
+
+
+# optimized version 2
+class ParkingSystem:
+
+    def __init__(self, big: int, medium: int, small: int):
+        self.remaining_spots = [big, medium, small]
+        
+
+    def addCar(self, carType: int) -> bool:
+        carType -= 1 # make it compatible to python list index
+        if self.remaining_spots[carType] > 0:
+            self.remaining_spots[carType] -= 1
+            return True
+        else:
+            return False
+        
