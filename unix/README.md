@@ -17,6 +17,7 @@
 ### Creation and Inspection
 * `touch journal-2020-03-14.txt`: create a new file in the current directory
 * `wc todo.txt`: word count command, # lines, # words, # characters
+* `ls -1 | wc -l`: count number of files in current directory (-1("one") means only one entry per line, "|" means to pipe output onto, -l means to count lines)
 * `cat todo.txt todo.txt`: concatenate files and print them to terminal
 * `cat part1.txt part2.txt > all.txt`: concatenate files to a new file
 * `less Documents/a-tale-of-two-cities.txt`: print a preview of multi-page files (print the first several lines)
@@ -34,7 +35,8 @@
 * `mv todo.txt todo-2020-03-14.txt`: use mv to rename file and folders
 * `cp echo-out.txt ~/Desktop`: copy a file from one location to another
 * `cp -r Documents ~/Desktop`: copy a file folder, r means recursive, every underlying directory structure will be copied
-* `rm echo-out.txt`: remove file or folder, i.e. permanently delete, not recommended (no way to undo)
+* `rm echo-out.txt`: remove file, i.e. permanently delete, not recommended (no way to undo)
+* `rmdir data`: remove data folder
 
 
 ### Help
