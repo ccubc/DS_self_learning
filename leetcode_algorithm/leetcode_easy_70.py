@@ -43,3 +43,17 @@ class Solution:
         for i in range(2, n):
             res = [res[1], sum(res)]
         return res[1]
+
+# 20210113
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # recursion takes too long to run, hence will use iteration
+        if n < 4:
+            return n
+        s1 = 1
+        s2 = 2
+        for i in range(3, n+1):
+            s = s1+s2
+            s1 = s2
+            s2 = s
+        return s
