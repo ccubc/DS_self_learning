@@ -72,3 +72,16 @@ class Solution:
             min_price = min(i, min_price)
             res = max(res, i - min_price)
         return res
+
+
+"""
+20210115
+"""
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        cur_min, result = float('inf'), 0
+        for i in prices:
+            cur_min = min(cur_min, i)
+            result = max(i - cur_min, result)
+        return result
+            
