@@ -21,6 +21,16 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 @author: chengchen
 """
 
+# 20210120 revisit
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        nums = [0] + nums
+        dp = nums
+        for i in range(2, len(dp)):
+            dp[i] = max(nums[i]+dp[i-2], dp[i-1])
+        return dp[-1]
+
+
 class Solution:
     def rob(self, nums: List[int]) -> int:
         if len(nums) == 0:
