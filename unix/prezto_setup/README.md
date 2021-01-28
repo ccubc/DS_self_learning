@@ -22,7 +22,11 @@ Just follow the install instructions [HERE](https://github.com/sorin-ionescu/pre
 `open ~/.zpreztorc`
 2. Scroll down the file until you see lines of submodules there, such as 'environment', 'terminal', 'editor', etc. <br>Then add 'git', 'fasd', 'syntax-highlighting' before the line of 'prompt'<br>
 3. save and close the file
-4. Open a new terminal window, you will see the lovely changes.
+
+#### 3. Add customized command alias
+1. run `open ~/.zshrc`
+2. Below the section `# Customize to your needs...`, add the alias, for example: `alias j='fasd_cd -d'`
+3. Save and close the file
 
 #### Adding Emojis to Your Terminal🐣
 1. On Mac, you could access the emoji keypad with "Ctrl"+"Command"+"Space".
