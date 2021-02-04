@@ -22,6 +22,8 @@ Docker is a container that makes it easy to run and distribute applications acro
 `sudo docker rm container_id`
 * remove all docker containers from the system:
 `sudo docker rm ^C`
+* print all the images: `docker image ls`
+* remove a docker image: `docker rmi -f f3445sf4fsf245` (f34... is the image id)
 
 #### Creating your own images --- Dockerfile( a txt file that contains step-by-step instructions for creating Docker images) 
 * example Dockerfile:
